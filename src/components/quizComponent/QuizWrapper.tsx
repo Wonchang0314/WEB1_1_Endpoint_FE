@@ -23,6 +23,16 @@ function QuizWrapper({ quiz }: QuizWrapperProps) {
 
   const submitAnswerMutation = usePostAnswer();
 
+  const [localCommentCount, setLocalCommentCount] = useState(0);
+
+  const handleAddComment = () => {
+    setLocalCommentCount((prev) => prev + 1);
+  };
+
+  const handleDeleteComment = () => {
+    setLocalCommentCount((prev) => prev - 1);
+  };
+
   useEffect(() => {
     if (selectedAnswer !== null) {
       setIsCorrect(selectedAnswer === quiz.answer?.answerNumber);
@@ -99,13 +109,19 @@ function QuizWrapper({ quiz }: QuizWrapperProps) {
         )}
         <QuizFooter
           likes={likes}
-          comments={quiz.count.comment}
+          comments={quiz.count.comment + localCommentCount}
           isLiked={isLiked}
           onToggleLike={handleToggleLike}
           onCommentsClick={() => setBottomSheetOpen(true)}
         />
       </div>
-      <BottomSheet isOpen={isBottomSheetOpen} setOpen={setBottomSheetOpen} quizId={quiz.id} />
+      <BottomSheet
+        isOpen={isBottomSheetOpen}
+        setOpen={setBottomSheetOpen}
+        quizId={quiz.id}
+        onAddComment={handleAddComment}
+        onDeleteComment={handleDeleteComment}
+      />
     </div>
   );
 }

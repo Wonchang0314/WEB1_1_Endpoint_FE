@@ -18,9 +18,17 @@ interface BottomSheetProps {
   isOpen: boolean;
   setOpen: React.Dispatch<React.SetStateAction<boolean>>;
   quizId: number;
+  onAddComment: () => void;
+  onDeleteComment: () => void;
 }
 
-export default function BottomSheet({ isOpen, setOpen, quizId }: BottomSheetProps) {
+export default function BottomSheet({
+  isOpen,
+  setOpen,
+  quizId,
+  onAddComment,
+  onDeleteComment,
+}: BottomSheetProps) {
   const { comments, loading, fetchComments } = useFetchComments(quizId);
   const addCommentMutation = useAddComment(quizId);
   const deleteCommentMutation = useDeleteComment(quizId);
@@ -49,6 +57,8 @@ export default function BottomSheet({ isOpen, setOpen, quizId }: BottomSheetProp
           setToastMessage('댓글이 등록되었습니다.');
           setToastIcon('check');
           setToastOpen(true);
+
+          onAddComment();
         },
         onError: () => {
           setToastMessage('댓글 등록에 실패했습니다.');
@@ -67,6 +77,8 @@ export default function BottomSheet({ isOpen, setOpen, quizId }: BottomSheetProp
         setToastMessage('댓글이 삭제되었습니다.');
         setToastIcon('check');
         setToastOpen(true);
+
+        onDeleteComment();
       },
       onError: () => {
         setToastMessage('댓글 삭제에 실패했습니다.');
