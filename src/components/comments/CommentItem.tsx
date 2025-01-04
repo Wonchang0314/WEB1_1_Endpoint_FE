@@ -1,7 +1,7 @@
 import Avatar from '@eolluga/eolluga-ui/Display/Avatar';
 import Icon from '@eolluga/eolluga-ui/icon/Icon';
 import { Button } from '@/shadcn/ui/button';
-import { Comment } from '@/types';
+import { Comment } from '@/types/CommentTypes';
 
 interface CommentItemProps {
   comment: Comment;

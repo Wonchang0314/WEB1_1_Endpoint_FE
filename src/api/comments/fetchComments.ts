@@ -1,5 +1,5 @@
 import { useQuery } from '@tanstack/react-query';
-import { Comment } from '@/types';
+import { Comment } from '@/types/CommentTypes';
 import axiosInstance from '../axiosInstance';
 
 const fetchCommentsAPI = async (quizId: number): Promise<Comment[]> => {
