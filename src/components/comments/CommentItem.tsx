@@ -8,7 +8,7 @@ interface CommentItemProps {
   onDelete: (commentId: number) => void;
   toggleReplies?: () => void;
   expanded?: boolean;
-  onReply?: (parentCommentId: number) => void;
+  onReply?: (comment: Comment) => void;
 }
 
 const CommentItem = ({ comment, onDelete, toggleReplies, expanded, onReply }: CommentItemProps) => (
@@ -23,7 +23,7 @@ const CommentItem = ({ comment, onDelete, toggleReplies, expanded, onReply }: Co
               variant="ghost"
               size="sm"
               className="text-blue-500 hover:underline"
-              onClick={() => onReply?.(comment.id)}
+              onClick={() => onReply?.(comment)}
             >
               답글 달기
             </Button>
@@ -42,7 +42,7 @@ const CommentItem = ({ comment, onDelete, toggleReplies, expanded, onReply }: Co
           variant="ghost"
           size="sm"
           className="text-blue-500 hover:underline"
-          onClick={toggleReplies}
+          onClick={() => onReply?.(comment)}
         >
           {expanded ? '답글 숨기기' : `답글 ${comment.childComments.length}개 더보기`}
         </Button>

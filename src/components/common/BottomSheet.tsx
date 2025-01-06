@@ -13,6 +13,8 @@ import useFetchComments from '@/api/comments/fetchComments';
 import useAddComment from '@/api/comments/addComments';
 import useDeleteComment from '@/api/comments/deleteComments';
 import ToastMessage from './ToastMessage';
+import ReplyBottomSheet from './ReplyBottomSheet';
+import { Comment } from '@/types/CommentTypes';
 
 interface BottomSheetProps {
   isOpen: boolean;
@@ -34,6 +36,8 @@ export default function BottomSheet({
   const deleteCommentMutation = useDeleteComment(quizId);
   const [inputPlaceholder, setInputPlaceholder] = useState('댓글을 입력하세요...');
   const [parentCommentId, setParentCommentId] = useState<number>(0);
+  const [isReplySheetOpen, setReplySheetOpen] = useState(false);
+  const [selectedComment, setSelectedComment] = useState<Comment | null>(null);
 
   const [toastMessage, setToastMessage] = useState('');
   const [toastIcon, setToastIcon] = useState<'check' | 'warning'>('check');
@@ -88,9 +92,9 @@ export default function BottomSheet({
     });
   };
 
-  const handleReply = (replyParentId: number) => {
-    setParentCommentId(replyParentId);
-    setInputPlaceholder('답글을 입력하세요...');
+  const handleReply = (comment: Comment) => {
+    setSelectedComment(comment);
+    setReplySheetOpen(true);
   };
 
   return (
@@ -128,6 +132,12 @@ export default function BottomSheet({
           />
         </DrawerContent>
       </Drawer>
+      <ReplyBottomSheet
+        isOpen={isReplySheetOpen}
+        setOpen={setReplySheetOpen}
+        parentComment={selectedComment}
+        quizId={quizId}
+      />
     </>
   );
 }

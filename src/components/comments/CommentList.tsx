@@ -6,7 +6,7 @@ interface CommentListProps {
   onDelete: (commentId: number) => void;
   expandedComments: { [key: number]: boolean };
   toggleReplies: (commentId: number) => void;
-  onReply: (parentCommentId: number) => void;
+  onReply: (comment: Comment) => void;
 }
 
 const CommentList = ({
