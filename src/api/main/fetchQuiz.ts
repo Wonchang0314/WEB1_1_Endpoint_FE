@@ -1,6 +1,7 @@
 import { useInfiniteQuery } from '@tanstack/react-query';
 import axiosInstance from '../axiosInstance';
-import { BaseQuizAPI } from '@/types';
+import { useRef } from 'react';
+import { BaseQuizAPI } from '@/types/QuizTypes';
 
 interface FetchQuizzesParams {
   page: number;
@@ -24,11 +25,7 @@ const fetchQuizzes = async ({
     const params: Record<string, any> = { page, size };
     if (category) params.category = category;
 
-    console.log('요청 URL:', '/quiz/my/feed');
-    console.log('요청 매개변수:', params);
-
     const response = await axiosInstance.get('/quiz/my/feed', { params });
-    console.log('API 응답 데이터:', response.data);
 
     const { slice, category: responseCategory } = response.data.result;
 
@@ -45,13 +42,21 @@ const fetchQuizzes = async ({
 };
 
 const useQuizFeed = () => {
-  let category: string | undefined;
+  // let category: string | undefined;
+  const categoryRef = useRef<string | undefined>(undefined);
 
   return useInfiniteQuery({
     queryKey: ['quizFeed'],
     queryFn: async ({ pageParam = 0 }) => {
-      const response = await fetchQuizzes({ page: pageParam, size: 5, category });
-      if (response.category) category = response.category;
+      const response = await fetchQuizzes({
+        page: pageParam,
+        size: 5,
+        category: categoryRef.current,
+      });
+
+      if (!categoryRef.current && response.category) {
+        categoryRef.current = response.category;
+      }
       return response;
     },
     getNextPageParam: (lastPage) => (lastPage.hasNext ? lastPage.page + 1 : undefined),

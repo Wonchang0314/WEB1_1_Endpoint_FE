@@ -1,10 +1,9 @@
 import { useQuery } from '@tanstack/react-query';
-import { Comment } from '@/types';
+import { Comment } from '@/types/CommentTypes';
 import axiosInstance from '../axiosInstance';
 
 const fetchCommentsAPI = async (quizId: number): Promise<Comment[]> => {
   const response = await axiosInstance.get(`/quiz/comments`, { params: { quizId } });
-  console.log('댓글 조회 응답:', response.data);
   return response.data.result;
 };
 

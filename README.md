@@ -76,6 +76,8 @@
 | PM                                                                           |                                                                              |                                                                             | 팀장                                                                        |
 
 </div>
+<br><br>
+</div>
 
 # 📚 기술 스택
 
@@ -83,8 +85,8 @@
 
 ## Config
 
-![yarn](https://img.shields.io/badge/npm-2C8EBB?style=for-the-badge&logo=yarn&logoColor=white)
-![Vite](https://img.shields.io/badge/vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)
+![Yarn](https://img.shields.io/badge/Yarn-2C8EBB?style=for-the-badge&logo=yarn&logoColor=white)
+![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)
 
 ## Development
 
@@ -96,7 +98,10 @@
 ![Zustand](https://img.shields.io/badge/zustand-orange?style=for-the-badge&logo=zustand&logoColor=white)
 ![ReactQuery](https://img.shields.io/badge/Reactquery-FF4154?style=for-the-badge&logo=reactquery&logoColor=white)
 ![ReactRouter](https://img.shields.io/badge/reactrouter-CA4245?style=for-the-badge&logo=reactrouter&logoColor=white)
-![Socket.io](https://img.shields.io/badge/socket.io-010101?style=for-the-badge&logo=socketdotio&logoColor=white)
+![stomp.js](https://img.shields.io/badge/stomp.js-0366d6?style=for-the-badge&logo=javascript&logoColor=white)
+![sock.js](https://img.shields.io/badge/sock.js-9cf?style=for-the-badge&logo=javascript&logoColor=black)
+![EventSource Polyfill](https://img.shields.io/badge/EventSource%20Polyfill-f39c12?style=for-the-badge&logo=polymer-project&logoColor=white)
+
 
 ### 🛠️ Back-End
 
@@ -120,7 +125,7 @@
 
 ### Architecture
 
-![아키텍처](https://github.com/user-attachments/assets/3c8786ac-dcc1-4d42-8b8d-b68fe8598ef9)
+![아키텍처](https://github.com/user-attachments/assets/8640ac58-aa0b-4f38-a829-3be0a1ee34ef)
 
 </div>
 
@@ -130,7 +135,19 @@
 
 ### 퀴즈 피드
 
+<table>
+    <tr>
+      <td width="270" align="center"><p><strong>퀴즈 피드</strong></p><img src="https://github.com/user-attachments/assets/c6c90da6-bb88-4f2b-81ef-a290ba2cbc4d" alt="퀴즈 피드"></td>
+    </tr>
+</table>
+
 ### 퀴즈 검색
+
+<table>
+    <tr>
+      <td width="270" align="center"><p><strong>퀴즈 검색</strong></p><img src="https://github.com/user-attachments/assets/3f5e9ec5-1a5c-4f21-b0f3-0cd0e8eea6fb" alt="퀴즈 검색"></td>
+    </tr>
+</table>
 
 ### 퀴즈 CRUD
 
@@ -156,6 +173,13 @@
 
 ### 마이 페이지
 
+<table>
+    <tr>
+      <td width="270" align="center"><p><strong>마이 페이지</strong></p><img src="https://github.com/user-attachments/assets/1cf20d30-d0e1-43d8-ac65-60a56bcc8fa6" alt="마이 페이지"></td>
+      <td width="270" align="center"><p><strong>오답노트</strong></p><img src="https://github.com/user-attachments/assets/08e2ac53-d98e-4c47-bf60-fc627295fb1a" alt="오답노트"></td>
+    </tr>
+</table>
+
 ## 작업 관리
 
 [JIRA](https://rkdwldnjs878-1731394506977.atlassian.net/jira/software/projects/QUZ/boards/1/backlog?epics=visible)
@@ -172,9 +196,6 @@
 
 </div>
 
-# 와이어프레임
-
-[Figma](https://embed.figma.com/board/b0GOfiYpuendfJwq8Gatbv/%EC%88%8F%ED%8F%BC-%ED%80%B4%EC%A6%88-%ED%94%8C%EB%9E%AB%ED%8F%BC-%ED%99%94%EB%A9%B4-%EC%A0%95%EC%9D%98?node-id=0-1&node-type=canvas&t=yheujhD0MAfZ215H-0&embed-host=notion&footer=false&theme=system)
 
 ## 시스템 아키텍쳐
 
@@ -184,32 +205,3 @@
 
 ![Quizy CICD](https://github.com/user-attachments/assets/33c6a245-bbf5-4197-a996-62b8dccb40c1)
 
-# Quizy-front
-
-## 세팅
-
-1. 레포지토리 포크
-
-```bash
-git clone ~
-cd (project-name)
-
-yarn install
-yarn dev
-```
-
-## 폴더 구조
-
-```
-src/
-|── api/
-|── components/
-| |── common/
-| └── layout/
-|── pages/
-| └── MainPage.tsx
-|── hooks/
-|── styles/
-|── stores/
-└── types/
-```

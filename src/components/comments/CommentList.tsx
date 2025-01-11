@@ -1,12 +1,12 @@
 import CommentItem from './CommentItem';
-import { Comment } from '@/types';
+import { Comment } from '@/types/CommentTypes';
 
 interface CommentListProps {
   comments: Comment[];
   onDelete: (commentId: number) => void;
   expandedComments: { [key: number]: boolean };
   toggleReplies: (commentId: number) => void;
-  onReply: (parentCommentId: number) => void;
+  onReply: (comment: Comment) => void;
 }
 
 const CommentList = ({

@@ -1,10 +1,13 @@
-import { BaseQuizAPI } from '@/types';
 import Avatar from '@eolluga/eolluga-ui/Display/Avatar';
 import { useEffect, useState } from 'react';
-import { QuizAns, QuizFooter, QuizRenderer } from '.';
 import BottomSheet from '../common/BottomSheet';
 import { useToggleLike } from '@/api/updateLike';
 import { usePostAnswer } from '@/api/quiz/postAnswer';
+import defaultUserImage from '@/assets/default_user.png';
+import QuizAns from './QuizAns';
+import QuizRenderer from './QuizRenderer';
+import QuizFooter from './QuizFooter';
+import { BaseQuizAPI } from '@/types/QuizTypes';
 
 interface QuizWrapperProps {
   quiz: BaseQuizAPI;
@@ -19,6 +22,16 @@ function QuizWrapper({ quiz }: QuizWrapperProps) {
   const [isAnswerVisible, setIsAnswerVisible] = useState(false);
 
   const submitAnswerMutation = usePostAnswer();
+
+  const [localCommentCount, setLocalCommentCount] = useState(0);
+
+  const handleAddComment = () => {
+    setLocalCommentCount((prev) => prev + 1);
+  };
+
+  const handleDeleteComment = () => {
+    setLocalCommentCount((prev) => prev - 1);
+  };
 
   useEffect(() => {
     if (selectedAnswer !== null) {
@@ -47,9 +60,11 @@ function QuizWrapper({ quiz }: QuizWrapperProps) {
 
   const answerRate = correctOption ? correctOption.selectionRatio * 100 : 0;
 
-  const authorName = quiz.author?.name || 'default';
-  const authorImage = quiz.author?.imagePath || '/';
-  
+  const defaultImageUrl = defaultUserImage;
+
+  const authorName = quiz.author?.name || '사용자';
+  const authorImage = quiz.author?.imagePath || defaultImageUrl;
+
   const toggleLikeMutation = useToggleLike(
     () => {
       setIsLiked((prev) => !prev);
@@ -94,13 +109,19 @@ function QuizWrapper({ quiz }: QuizWrapperProps) {
         )}
         <QuizFooter
           likes={likes}
-          comments={quiz.count.comment}
+          comments={quiz.count.comment + localCommentCount}
           isLiked={isLiked}
           onToggleLike={handleToggleLike}
           onCommentsClick={() => setBottomSheetOpen(true)}
         />
       </div>
-      <BottomSheet isOpen={isBottomSheetOpen} setOpen={setBottomSheetOpen} quizId={quiz.id} />
+      <BottomSheet
+        isOpen={isBottomSheetOpen}
+        setOpen={setBottomSheetOpen}
+        quizId={quiz.id}
+        onAddComment={handleAddComment}
+        onDeleteComment={handleDeleteComment}
+      />
     </div>
   );
 }
