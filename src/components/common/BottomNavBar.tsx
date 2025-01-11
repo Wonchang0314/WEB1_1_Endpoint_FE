@@ -1,6 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 import Icon from '@eolluga/eolluga-ui/icon/Icon';
-import { NavBarType } from '@/types';
+import { NavBarType } from '@/types/NavBarType';
 import { IoGameControllerOutline } from 'react-icons/io5';
 
 const BottomNavBar = ({ activeTab, setActiveTab }: NavBarType) => {

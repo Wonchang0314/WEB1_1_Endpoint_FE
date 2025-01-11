@@ -1,6 +1,6 @@
 import { useInfiniteQuery } from '@tanstack/react-query';
 import axiosInstance from '@/api/axiosInstance';
-import { BaseQuizAPI } from '@/types';
+import { BaseQuizAPI } from '@/types/QuizTypes';
 
 interface FetchQuizzesResponse {
   quizzes: BaseQuizAPI[];

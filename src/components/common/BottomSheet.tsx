@@ -13,19 +13,31 @@ import useFetchComments from '@/api/comments/fetchComments';
 import useAddComment from '@/api/comments/addComments';
 import useDeleteComment from '@/api/comments/deleteComments';
 import ToastMessage from './ToastMessage';
+import ReplyBottomSheet from './ReplyBottomSheet';
+import { Comment } from '@/types/CommentTypes';
 
 interface BottomSheetProps {
   isOpen: boolean;
   setOpen: React.Dispatch<React.SetStateAction<boolean>>;
   quizId: number;
+  onAddComment: () => void;
+  onDeleteComment: () => void;
 }
 
-export default function BottomSheet({ isOpen, setOpen, quizId }: BottomSheetProps) {
+export default function BottomSheet({
+  isOpen,
+  setOpen,
+  quizId,
+  onAddComment,
+  onDeleteComment,
+}: BottomSheetProps) {
   const { comments, loading, fetchComments } = useFetchComments(quizId);
   const addCommentMutation = useAddComment(quizId);
   const deleteCommentMutation = useDeleteComment(quizId);
   const [inputPlaceholder, setInputPlaceholder] = useState('댓글을 입력하세요...');
   const [parentCommentId, setParentCommentId] = useState<number>(0);
+  const [isReplySheetOpen, setReplySheetOpen] = useState(false);
+  const [selectedComment, setSelectedComment] = useState<Comment | null>(null);
 
   const [toastMessage, setToastMessage] = useState('');
   const [toastIcon, setToastIcon] = useState<'check' | 'warning'>('check');
@@ -33,10 +45,7 @@ export default function BottomSheet({ isOpen, setOpen, quizId }: BottomSheetProp
 
   useEffect(() => {
     if (isOpen) {
-      console.log(`fetchComments 호출 ${quizId}`);
-      fetchComments()
-        .then(() => console.log('댓글 데이터 로드 완료'))
-        .catch((err) => console.error('댓글 데이터 로드 실패:', err));
+      fetchComments().catch((err) => console.error('댓글 데이터 로드 실패:', err));
     }
   }, [isOpen, fetchComments]);
 
@@ -52,6 +61,8 @@ export default function BottomSheet({ isOpen, setOpen, quizId }: BottomSheetProp
           setToastMessage('댓글이 등록되었습니다.');
           setToastIcon('check');
           setToastOpen(true);
+
+          onAddComment();
         },
         onError: () => {
           setToastMessage('댓글 등록에 실패했습니다.');
@@ -70,6 +81,8 @@ export default function BottomSheet({ isOpen, setOpen, quizId }: BottomSheetProp
         setToastMessage('댓글이 삭제되었습니다.');
         setToastIcon('check');
         setToastOpen(true);
+
+        onDeleteComment();
       },
       onError: () => {
         setToastMessage('댓글 삭제에 실패했습니다.');
@@ -79,10 +92,9 @@ export default function BottomSheet({ isOpen, setOpen, quizId }: BottomSheetProp
     });
   };
 
-  const handleReply = (replyParentId: number) => {
-    setParentCommentId(replyParentId);
-    setInputPlaceholder('답글을 입력하세요...');
-    console.log(replyParentId);
+  const handleReply = (comment: Comment) => {
+    setSelectedComment(comment);
+    setReplySheetOpen(true);
   };
 
   return (
@@ -120,6 +132,12 @@ export default function BottomSheet({ isOpen, setOpen, quizId }: BottomSheetProp
           />
         </DrawerContent>
       </Drawer>
+      <ReplyBottomSheet
+        isOpen={isReplySheetOpen}
+        setOpen={setReplySheetOpen}
+        parentComment={selectedComment}
+        quizId={quizId}
+      />
     </>
   );
 }
