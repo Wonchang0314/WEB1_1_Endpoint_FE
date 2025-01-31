@@ -24,13 +24,11 @@
 - **배포 링크**: [Quizy](https://quizy-fe.vercel.app/)  
   (현재 비용 문제로 서버가 잠시 내려가 있습니다)
   
-- **팀 프로젝트 Notion**:  
-  [![프로젝트 Notion 링크](https://github.com/user-attachments/assets/bb1eb154-071d-4acd-a83d-2e62f048d716)](https://snapdragon-canary-315.notion.site/Team04-EndPoint-1584af60efb7809e99fedaa490f2cbc9?pvs=4)
+- **팀 프로젝트 Notion**: [Notion](https://snapdragon-canary-315.notion.site/Team04-EndPoint-1584af60efb7809e99fedaa490f2cbc9?pvs=4) 
 
-- **프로젝트 소개 영상**:  
-  [![프로젝트 영상 링크](https://github.com/user-attachments/assets/8a797cee-9587-44f8-a3ea-ed7f5e5e3534)](https://www.youtube.com/watch?v=K8iRQxYGXew)
+- **프로젝트 소개 영상**: [Youtube](https://www.youtube.com/watch?v=K8iRQxYGXew)
 
-- **GitHub**: [Quizy Repository](https://github.com/prgrms-web-devcourse-final-project/WEB1_1_Endpoint_FE)
+- **GitHub**: [Repository](https://github.com/prgrms-web-devcourse-final-project/WEB1_1_Endpoint_FE)
 
 ---
 
