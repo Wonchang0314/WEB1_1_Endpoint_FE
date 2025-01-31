@@ -1,6 +1,4 @@
-<div align=center>
-
-# 🧐 Quizy : 소셜 퀴즈 플랫폼
+# 🧑‍💻 숏폼 CS 퀴즈 플랫폼 서비스 (프로그래머스 데브코스 최종 프로젝트)
 
 </div>
 
@@ -10,198 +8,75 @@
 
 </div>
 
-## 🚀 프로젝트 소개
+## 📌 프로젝트 소개  
+**Quizy**는 프로그래머스 데브코스 1회차에서 **우수상**을 받은 프로젝트로,  
+취업 준비생과 저연차 개발자들이 보다 **편리하고 일상적으로 CS 지식**을 학습할 수 있도록 개발된 숏폼 CS 퀴즈 플랫폼 서비스입니다.  
+주요 기능은 다음과 같습니다:
 
-<div align=center>
-
-### 📢배포 링크
-
-<a href="https://quizy-fe.vercel.app/">
-  <img src="https://github.com/user-attachments/assets/7215cf49-1743-4765-94f2-218708e879e5" alt="그림2" width="300">
-</a><br />
-<a href="https://snapdragon-canary-315.notion.site/Team04-EndPoint-1584af60efb7809e99fedaa490f2cbc9?pvs=4">
-  <img src="https://github.com/user-attachments/assets/bb1eb154-071d-4acd-a83d-2e62f048d716" alt="그림1" width="300">
-</a><br />
-<a href="https://www.youtube.com/watch?v=K8iRQxYGXew">
-  <img src="https://github.com/user-attachments/assets/8a797cee-9587-44f8-a3ea-ed7f5e5e3534" alt="그림3" width="300">
-</a>
-<br><br>
+- **퀴즈 피드**: 모바일 뷰에 적합한 **스와이프** 형식으로 간편하게 퀴즈를 풀고, 댓글을 통해 사용자 간 토론을 진행할 수 있습니다.
+- **퀴즈 검색**: 키워드와 인기 태그를 활용해 원하는 퀴즈를 쉽게 검색할 수 있습니다.
+- **멀티 퀴즈 게임**: 관심 있는 CS 카테고리의 퀴즈 게임을 실시간으로 지인 및 다른 사용자들과 진행할 수 있습니다.
+- **마이페이지**: 프로필 조회 및 수정, 그리고 퀴즈 생성 및 편집이 가능합니다.
 
 ---
 
-### 🌟 **Quizy의 핵심 기능** 🌟
+## 🚀 배포 및 리소스 
+- **배포 링크**: [Quizy](https://quizy-fe.vercel.app/)  
+  (현재 비용 문제로 서버가 잠시 내려가 있습니다)
+  
+- **팀 프로젝트 Notion**:  
+  [![프로젝트 Notion 링크](https://github.com/user-attachments/assets/bb1eb154-071d-4acd-a83d-2e62f048d716)](https://snapdragon-canary-315.notion.site/Team04-EndPoint-1584af60efb7809e99fedaa490f2cbc9?pvs=4)
 
-<div align="center" style="text-align: left; display: inline-block;">
+- **프로젝트 소개 영상**:  
+  [![프로젝트 영상 링크](https://github.com/user-attachments/assets/8a797cee-9587-44f8-a3ea-ed7f5e5e3534)](https://www.youtube.com/watch?v=K8iRQxYGXew)
 
-**Quizy**는 개발자들을 위한 **소셜 퀴즈 플랫폼**입니다! 🍀<br>
-간단한 **O/X 퀴즈**와 **객관식 문제**로 IT 지식을 **재미있게** 쌓아보세요. 🎮<br>
-**실시간 대결**로 순위를 높이고, 다른 개발자들과 **경쟁**해보세요! 🏆<br>
-**AI가 생성한 맞춤형 퀴즈**로 팀원들과 **협력하며 학습**할 수 있습니다. 🤝<br>
-**Quizy와 함께라면**, 개발 공부가 더 이상 지루하지 않습니다! ✨
+- **GitHub**: [Quizy Repository](https://github.com/prgrms-web-devcourse-final-project/WEB1_1_Endpoint_FE)
 
-</div>
+---
 
-### 🚀 **배우고, 경쟁하고, 함께 성장하세요!** 🚀
+## 🛠 기술 스택  
+| 분류        | 기술  |
+|------------|--------------------------|
+| **개발 언어**  | TypeScript |
+| **프레임워크** | React |
+| **라이브러리** | shadcn/ui, Sock.js, Stomp.js, EventSource Polyfill |
+| **스타일링** | Tailwind CSS |
+| **상태관리** | React-Query, Zustand |
+| **배포 및 인프라** | Vercel |
+| **버전 관리** | Git, GitHub, GitHub Action |
 
-</div>
+---
 
-## 📅 개발 기간
+## ✨ 주요 기능  
+- 📲 **퀴즈 피드**: 간편한 스와이프 형식의 퀴즈 풀기  
+- 🔍 **퀴즈 검색**: 키워드와 인기 태그로 퀴즈 검색  
+- 🎮 **멀티 퀴즈 게임**: 실시간으로 퀴즈 게임을 즐기기  
+- 📝 **마이페이지**: 퀴즈 생성, 프로필 수정 및 관리  
 
-- `전체 개발 기간` : 2024-11-15 ~ 2024-12-06
+---
 
-## ✨ 팀원 소개
+## 🛠 문제 해결 경험  
+### ✅ SEO 최적화  
+- 사용자 수가 중요한 서비스인 만큼 **초기 유입**을 위해 SEO 최적화를 진행했습니다.  
+- 이를 위해 `robots.txt`와 `sitemap.xml` 파일을 생성하고, 제공하는 **Vercel 서버리스 함수**를 구현했습니다.  
+- 또한, **React-helmet**을 사용하여 페이지마다 동적으로 **메타태그**를 삽입하여 페이지별로 메타 설명을 제공하고자 했습니다.  
+- **결과**: Lighthouse 성능 점수를 **80점 → 100점**으로 개선할 수 있었습니다.
 
-<div align=center>
+---
 
-### 🎨 Front-End
+## 👨‍💻 팀 구성 및 역할  
+| 역할 | 인원 | 담당 업무 |
+|------|------|-------------------------|
+| **백엔드 개발자** | 4명 | 서버 및 API 개발 |
+| **프론트엔드 개발자** | 4명 | 클라이언트 개발 및 UI 구현 |
+| **기획 및 작업 관리** | 1명 (팀장) | 프로젝트 기획, 팀 관리, 스프린트 설정 |
 
-<div align=center>
+---
 
-| <img src="https://avatars.githubusercontent.com/u/50727457?v=4" width="80"> | <img src="https://avatars.githubusercontent.com/u/95310496?v=4" width="80"> | <img src="https://avatars.githubusercontent.com/u/122918159?v=4" width="80"> | <img src="https://avatars.githubusercontent.com/u/82489078?v=4" width="80"> |
-| --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | ---------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
-| [박덕인](https://github.com/kod0751)                                        | [유상훈](https://github.com/Yoos99)                                         | [장원석](https://github.com/Wonchang0314)                                    | [최훈](https://github.com/hoon-hoon)                                        |
-| 프로필 페이지                                                               | 퀴즈 CRUD                                                                   | 게임, 공통 컴포넌트                                                          | 메인, 검색 페이지                                                           |
-|                                                                             |                                                                             | 팀장                                                                         |                                                                             |
+## 🔍 회고  
+### 🌟 좋았던 점  
+- **웹소캣 (Sock + Stomp.js)**을 활용해 처음으로 실시간 서비스를 구현하며,  
+  **백엔드**와 비즈니스 로직에 대해 더 많이 소통할 수 있었던 점이 유익했습니다.
 
-</div>
-
-### 🛠️ Back-End
-
-<div align=center>
-
-| <img src="https://avatars.githubusercontent.com/u/128073698?v=4" width="80"> | <img src="https://avatars.githubusercontent.com/u/112960401?v=4" width="80"> | <img src="https://avatars.githubusercontent.com/u/67736320?v=4" width="80"> | <img src="https://avatars.githubusercontent.com/u/97011190?v=4" width="80"> |
-| ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
-| [강지원](https://github.com/JiwonKKang)                                      | [나민혁](https://github.com/NaMinhyeok)                                      | [윤수빈](https://github.com/s0o0bn)                                         | [황민우](https://github.com/HMWG)                                           |
-| 인프라, CI/CD, 퀴즈                                                          | 게임                                                                         | 검색, 매칭                                                                  | 회원, 게이트웨이                                                            |
-| PM                                                                           |                                                                              |                                                                             | 팀장                                                                        |
-
-</div>
-<br><br>
-</div>
-
-# 📚 기술 스택
-
-<div align=center>
-
-## Config
-
-![Yarn](https://img.shields.io/badge/Yarn-2C8EBB?style=for-the-badge&logo=yarn&logoColor=white)
-![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)
-
-## Development
-
-### 🎨 Front-End
-
-![React](https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=white)
-![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
-![TailwindCSS](https://img.shields.io/badge/TailwindCSS-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)
-![Zustand](https://img.shields.io/badge/zustand-orange?style=for-the-badge&logo=zustand&logoColor=white)
-![ReactQuery](https://img.shields.io/badge/Reactquery-FF4154?style=for-the-badge&logo=reactquery&logoColor=white)
-![ReactRouter](https://img.shields.io/badge/reactrouter-CA4245?style=for-the-badge&logo=reactrouter&logoColor=white)
-![stomp.js](https://img.shields.io/badge/stomp.js-0366d6?style=for-the-badge&logo=javascript&logoColor=white)
-![sock.js](https://img.shields.io/badge/sock.js-9cf?style=for-the-badge&logo=javascript&logoColor=black)
-![EventSource Polyfill](https://img.shields.io/badge/EventSource%20Polyfill-f39c12?style=for-the-badge&logo=polymer-project&logoColor=white)
-
-
-### 🛠️ Back-End
-
-![Kotlin](https://img.shields.io/badge/Kotlin-0095D5?style=for-the-badge&logo=kotlin&logoColor=white)
-![Spring Boot](https://img.shields.io/badge/Spring%20Boot-6DB33F?style=for-the-badge&logo=springboot&logoColor=white)
-![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
-![Redis](https://img.shields.io/badge/Redis-DC382D?style=for-the-badge&logo=redis&logoColor=white)
-![ElasticSearch](https://img.shields.io/badge/ElasticSearch-005571?style=for-the-badge&logo=elasticsearch&logoColor=white)
-![Kafka](https://img.shields.io/badge/Kafka-231F20?style=for-the-badge&logo=apachekafka&logoColor=white)
-
-### ⚙️ DevOps
-
-![GitHub Actions](https://img.shields.io/badge/GitHub%20Actions-2088FF?style=for-the-badge&logo=githubactions&logoColor=white)
-![ArgoCD](https://img.shields.io/badge/ArgoCD-EA4AAA?style=for-the-badge&logo=argo&logoColor=white)
-![GCP](https://img.shields.io/badge/GCP-4285F4?style=for-the-badge&logo=googlecloud&logoColor=white)
-![GCLB](https://img.shields.io/badge/GCLB-4285F4?style=for-the-badge&logo=googlecloud&logoColor=white)
-![GKE](https://img.shields.io/badge/GKE-4285F4?style=for-the-badge&logo=googlecloud&logoColor=white)
-![GCE](https://img.shields.io/badge/GCE-4285F4?style=for-the-badge&logo=googlecloud&logoColor=white)
-![Google Cloud SQL](https://img.shields.io/badge/Google%20Cloud%20SQL-4285F4?style=for-the-badge&logo=googlecloud&logoColor=white)
-![GCS](https://img.shields.io/badge/GCS-4285F4?style=for-the-badge&logo=googlecloud&logoColor=white)
-
-### Architecture
-
-![아키텍처](https://github.com/user-attachments/assets/8640ac58-aa0b-4f38-a829-3be0a1ee34ef)
-
-</div>
-
-# 🚀 기능 소개
-
-### 회원가입 및 로그인
-
-### 퀴즈 피드
-
-<table>
-    <tr>
-      <td width="270" align="center"><p><strong>퀴즈 피드</strong></p><img src="https://github.com/user-attachments/assets/c6c90da6-bb88-4f2b-81ef-a290ba2cbc4d" alt="퀴즈 피드"></td>
-    </tr>
-</table>
-
-### 퀴즈 검색
-
-<table>
-    <tr>
-      <td width="270" align="center"><p><strong>퀴즈 검색</strong></p><img src="https://github.com/user-attachments/assets/3f5e9ec5-1a5c-4f21-b0f3-0cd0e8eea6fb" alt="퀴즈 검색"></td>
-    </tr>
-</table>
-
-### 퀴즈 CRUD
-
-<table>
-    <tr>
-      <td width="270" align="center"><p><strong>퀴즈 작성</strong></p><img src="https://github.com/user-attachments/assets/cbec332f-ee8e-49ff-87c9-d9e56c06bc74" alt="퀴즈 작성 및 조회"></td>
-       <td width="270" align="center"><p><strong>퀴즈 조회 및 수정</strong></p><img src="https://github.com/user-attachments/assets/fe967e1f-11d6-4df9-a6b3-4e7e1017081c" alt="퀴즈 수정"></td>
-       <td width="270" align="center"><p><strong>퀴즈 삭제</strong></p><img src="https://github.com/user-attachments/assets/3132d64c-a1f6-46ec-9c72-dfc0dda05547" alt="퀴즈 삭제"></td>
-    </tr>
-</table>
-
-### 게임 페이지
-
-<table>
-    <tr>
-      <td width="270" align="center"><p><strong>퀴즈 게임방 생성</strong></p><img src="https://github.com/user-attachments/assets/c4b75645-cf4b-4cd7-8d57-767193f77b4d" alt="게임 방 생성"></td>
-      <td width="270" align="center"><p><strong>랜덤 매칭</strong></p><img src="https://github.com/user-attachments/assets/08471291-3b4b-48a2-9855-9df0d7b912e3" alt="랜덤 매칭"></td>
-      <td width="280" align="center"><p><strong>퀴즈 게임방 대기방</strong></p><img src="https://github.com/user-attachments/assets/f269d60e-2987-49f5-aba4-7839017016ed" alt="게임 대기방"></td>
-      <td width="270" align="center"><p><strong>게임 시연 영상</strong></p><img src="https://github.com/user-attachments/assets/8f93e80b-90f1-47f6-b915-c1a777a34e04" alt="게임 시연 gif"></td>
-      <td width="270" align="center"><p><strong>게임 결과</strong></p><img src="https://github.com/user-attachments/assets/029840d8-5e85-4d7d-943a-481d65f77ba7" alt="게임 1등"></td>
-    </tr>
-</table>
-
-### 마이 페이지
-
-<table>
-    <tr>
-      <td width="270" align="center"><p><strong>마이 페이지</strong></p><img src="https://github.com/user-attachments/assets/1cf20d30-d0e1-43d8-ac65-60a56bcc8fa6" alt="마이 페이지"></td>
-      <td width="270" align="center"><p><strong>오답노트</strong></p><img src="https://github.com/user-attachments/assets/08e2ac53-d98e-4c47-bf60-fc627295fb1a" alt="오답노트"></td>
-    </tr>
-</table>
-
-## 작업 관리
-
-[JIRA](https://rkdwldnjs878-1731394506977.atlassian.net/jira/software/projects/QUZ/boards/1/backlog?epics=visible)
-
-- 애자일 스크럼 방법론을 도입하여 백로그 산정과 스프린트 단위의 개발을 체계적으로 진행했습니다.
-- Jira를 통해 백로그를 에픽으로 구성하고 세부 이슈를 생성하여 팀원들과 실시간으로 진행 상황을 공유했습니다.
-- 모든 코드 변경사항은 Pull Request를 통해 팀원들의 코드 리뷰를 거친 후 병합하여 코드 품질을 관리했습니다.
-
-## 기술 스택
-
-<div align=center>
-
-![image](https://github.com/user-attachments/assets/d3a92bdd-aac2-4cd2-8737-66a8fcd7ead7)
-
-</div>
-
-
-## 시스템 아키텍쳐
-
-![Quizy 시스템 아키텍쳐](https://github.com/user-attachments/assets/039e28b4-dc5d-4927-b4a2-d359ef1a7e3c)
-
-# CICD
-
-![Quizy CICD](https://github.com/user-attachments/assets/33c6a245-bbf5-4197-a996-62b8dccb40c1)
-
+### 😢 아쉬웠던 점  
+- **팀장**으로서 프로젝트를 진행하며 **기획과 개발 인원 관리**가 **개발보다 더 어려운 점**을 느꼈습니다.  
